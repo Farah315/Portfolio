@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap');
 
-/* ─── Variables ─────────────────────────────── */
 :root {
     --sky: #8ecae6;
     --blue-green: #219ebc;
@@ -19,7 +18,6 @@
     --max-w: 1100px;
 }
 
-/* ─── Reset ──────────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
@@ -33,11 +31,9 @@ img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
-/* ─── Scroll Reveal ──────────────────────────── */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 
-/* ─── Header ─────────────────────────────────── */
 header {
     position: sticky;
     top: 0;
@@ -89,7 +85,6 @@ nav a::after {
 nav a:hover, nav a.active { color: var(--amber); }
 nav a:hover::after, nav a.active::after { width: 100%; }
 
-/* Hamburger */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -111,7 +106,6 @@ nav a:hover::after, nav a.active::after { width: 100%; }
 .menu-toggle.active span:nth-child(2) { opacity: 0; }
 .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-/* ─── Section Base ───────────────────────────── */
 section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 .section-inner { max-width: var(--max-w); margin: 0 auto; }
 
@@ -133,7 +127,6 @@ section h2::after {
     margin-bottom: 2.5rem;
 }
 
-/* ─── Home ───────────────────────────────────── */
 #home {
     min-height: 100vh;
     display: flex;
@@ -214,7 +207,6 @@ body::after {
     margin-bottom: 1.4rem;
 }
 .home-content h2 span { color: var(--amber); }
-/* Override section h2::after for home */
 .home-content h2::after { display: none; }
 
 .home-content p {
@@ -249,7 +241,6 @@ body::after {
 }
 .img-frame img { width: 100%; height: 100%; object-fit: cover; }
 
-/* ─── Button ─────────────────────────────────── */
 button, .btn {
     display: inline-flex;
     align-items: center;
@@ -274,7 +265,6 @@ button:hover {
 }
 button:active { transform: translateY(0); }
 
-/* ─── About ──────────────────────────────────── */
 #about { background: var(--deep2); }
 .about-grid {
     display: grid;
@@ -320,7 +310,6 @@ button:active { transform: translateY(0); }
     color: var(--text-muted);
 }
 
-/* ─── Skills ─────────────────────────────────── */
 #skills { background: var(--deep); }
 .skills-grid {
     display: grid;
@@ -357,7 +346,6 @@ button:active { transform: translateY(0); }
     line-height: 1.5;
 }
 
-/* ─── Projects ───────────────────────────────── */
 #projects { background: var(--deep2); }
 .project-grid {
     display: grid;
@@ -448,7 +436,6 @@ button:active { transform: translateY(0); }
     border-radius: 100px;
 }
 
-/* ─── Contact ────────────────────────────────── */
 #contact { background: var(--deep); }
 
 .contact-layout {
@@ -529,7 +516,7 @@ button:active { transform: translateY(0); }
     text-overflow: ellipsis;
 }
 
-/* Contact image */
+
 .contact-right {
     display: flex;
     align-items: center;
@@ -551,7 +538,7 @@ button:active { transform: translateY(0); }
     object-fit: cover;
 }
 
-/* ─── Footer ─────────────────────────────────── */
+
 footer {
     background: var(--deep3);
     text-align: center;
@@ -563,7 +550,6 @@ footer p {
     font-size: 0.82rem;
 }
 
-/* ─── Responsive ─────────────────────────────── */
 @media (max-width: 900px) {
     .about-grid { grid-template-columns: 1fr; }
     .about-img-wrap { max-width: 340px; margin: 0 auto; }

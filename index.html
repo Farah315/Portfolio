@@ -232,14 +232,15 @@
     </footer>
 
     <script>
-        // Mobile nav toggle
+       
         const toggle = document.getElementById('menuToggle');
         const nav = document.getElementById('mainNav');
         toggle.addEventListener('click', () => {
             nav.classList.toggle('open');
             toggle.classList.toggle('active');
         });
-        // Close nav on link click
+        
+        
         nav.querySelectorAll('a').forEach(a => {
             a.addEventListener('click', () => {
                 nav.classList.remove('open');
@@ -247,7 +248,7 @@
             });
         });
 
-        // Scroll reveal
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(e => {
                 if (e.isIntersecting) {
@@ -260,7 +261,7 @@
             observer.observe(el);
         });
 
-        // Active nav link on scroll
+        
         const sections = document.querySelectorAll('section[id]');
         window.addEventListener('scroll', () => {
             let current = '';
