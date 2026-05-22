@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farah Tabal | Mobile Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>Farah Tabal</h1>
-        <nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="mainNav">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -21,117 +26,251 @@
         </nav>
     </header>
 
-    
     <section id="home">
-        <span class="tag">Mobile Software Engineer</span>
-        <h2>Building Android apps<br>that <span>scale</span> and <span>matter</span>.</h2>
-        <p>
-            Android Developer specializing in Kotlin and Clean Architecture.
-            I build robust, user-centered mobile applications with a focus
-            on performance, maintainability, and modern development practices.
-        </p>
-        <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
-            View My Work
-        </button>
-    </section>
-
-   
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am an Android Developer with 1+ year of experience building mobile applications
-            in the tech education sector. I have worked in agile teams of 60+ participants,
-            collaborating with designers, backend developers, and product managers to deliver
-            enterprise-level solutions.
-        </p>
-        <p>
-            My focus is on clean architecture, MVVM and MVP design patterns, and writing
-            maintainable, testable code. I am currently studying Computer Science at
-            Al-Aqsa University, and I am open to relocation for the right opportunity.
-        </p>
-    </section>
-
-    
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Languages</strong>Kotlin, Java, Python, JavaScript, HTML, CSS</li>
-            <li><strong>Android</strong>Jetpack Compose, XML, Material Design 3</li>
-            <li><strong>Architecture</strong>MVVM, MVP, Clean Architecture, SOLID Principles</li>
-            <li><strong>Libraries</strong>Retrofit, Ktor, Room, LiveData, ViewModel, Coroutines, Flow</li>
-            <li><strong>Dependency Injection</strong>Koin, Hilt, Dagger 2</li>
-            <li><strong>Testing</strong>JUnit, MockK — 80%+ coverage</li>
-            <li><strong>Tools</strong>Git, GitHub, GitHub Actions, Firebase, CI/CD</li>
-        </ul>
-    </section>
-
-   
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-
-            <article class="project">
-                <a href="https://github.com/TheChance101/MENA-mobile" target="_blank" class="project-img-link">
-                    <img src="https://opengraph.githubassets.com/1/TheChance101/MENA-mobile" alt="MENA App">
-                </a>
-                <h4>MENA – Super Chat & Social App</h4>
-                <p>
-                    A Kotlin Multiplatform super-app built with 60+ participants across 6 teams.
-                    Developed the Wallet Module including peer-to-peer transfers, transaction history
-                    with filters, PDF export, and offline-first caching. Also built the Admin Dashboard
-                    using Compose Multiplatform for user management and wallet operations.
-                </p>
-                <em>Kotlin Multiplatform · Compose Multiplatform · Ktor · Room · Koin · Clean Architecture</em>
-            </article>
-
-            <article class="project">
-                <a href="https://github.com/Baghdad-Squad/Novix" target="_blank" class="project-img-link">
-                    <img src="https://opengraph.githubassets.com/1/Baghdad-Squad/Novix" alt="Novix App">
-                </a>
-                <h4>Novix – Movie Discovery App</h4>
-                <p>
-                    An Android movie discovery app integrating the TMDB API with smart caching.
-                    Features an AI-based Islamic content filter, Dark and Light themes with
-                    Material Design 3, Firebase Analytics and Crashlytics, and 80%+ unit test coverage.
-                </p>
-                <em>Kotlin · Jetpack Compose · TMDB API · Firebase · Hilt · JUnit · MockK</em>
-            </article>
-
-            <article class="project">
-                <a href="https://github.com/Havana-Squad/Qurio" target="_blank" class="project-img-link">
-                    <img src="https://opengraph.githubassets.com/1/Havana-Squad/Qurio" alt="Qurio App">
-                </a>
-                <h4>Qurio – Trivia Quiz App</h4>
-                <p>
-                    A trivia quiz app featuring categories, timed questions, a scoring system,
-                    daily streaks, avatars, and performance history. Built with MVP architecture
-                    and asynchronous data handling using Kotlin Coroutines.
-                </p>
-                <em>Kotlin · XML · MVP · Retrofit · Coroutines · Room · Dagger 2</em>
-            </article>
-
+        <div class="home-content">
+            <h2>Building Android apps<br>that <span>scale</span> and <span>matter</span>.</h2>
+            <p>
+                Android Developer specializing in Kotlin and Clean Architecture.
+                I build robust, user-centered mobile applications with a focus
+                on performance, maintainability, and modern development practices.
+            </p>
+            <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+                View My Work
+            </button>
+        </div>
+        <div class="home-image">
+            <div class="img-frame">
+                <img src="images/hero_pic.png" alt="Farah Tabal" onerror="this.parentElement.style.display='none'">
+            </div>
         </div>
     </section>
 
-    
+    <section id="about">
+        <div class="section-inner">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-img-wrap">
+                    <img src="images/aboutMe.png" alt="About Farah" onerror="this.style.display='none'">
+                </div>
+                <div class="about-text">
+                    <p>
+                        I am an Android Developer with 1+ year of experience building mobile applications
+                        in the tech education sector. I have worked in agile teams of 60+ participants,
+                        collaborating with designers, backend developers, and product managers to deliver
+                        enterprise-level solutions.
+                    </p>
+                    <p>
+                        My focus is on clean architecture, MVVM and MVP design patterns, and writing
+                        maintainable, testable code. I am currently studying Computer Science at
+                        Al-Aqsa University, and I am open to relocation for the right opportunity.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat"><span class="stat-num">1+</span><span class="stat-label">Years Exp.</span></div>
+                        <div class="stat"><span class="stat-num">60+</span><span class="stat-label">Team Size</span></div>
+                        <div class="stat"><span class="stat-num">80%+</span><span class="stat-label">Test Coverage</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-inner">
+            <h2>Skills</h2>
+            <ul class="skills-grid">
+                <li>
+                    <strong>Languages</strong>
+                    <span>Kotlin, Java, Python, JavaScript, HTML, CSS</span>
+                </li>
+                <li>
+                    <strong>Android</strong>
+                    <span>Jetpack Compose, XML, Material Design 3</span>
+                </li>
+                <li>
+                    <strong>Architecture</strong>
+                    <span>MVVM, MVP, Clean Architecture, SOLID Principles</span>
+                </li>
+                <li>
+                    <strong>Libraries</strong>
+                    <span>Retrofit, Ktor, Room, LiveData, ViewModel, Coroutines, Flow</span>
+                </li>
+                <li>
+                    <strong>Dependency Injection</strong>
+                    <span>Koin, Hilt, Dagger 2</span>
+                </li>
+                <li>
+                    <strong>Testing</strong>
+                    <span>JUnit, MockK — 80%+ coverage</span>
+                </li>
+                <li>
+                    <strong>Tools</strong>
+                    <span>Git, GitHub, GitHub Actions, Firebase, CI/CD</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-inner">
+            <h2>Projects</h2>
+            <div class="project-grid">
+
+                <article class="project">
+                    <a href="https://github.com/TheChance101/MENA-mobile" target="_blank" class="project-img-link">
+                        <img src="https://opengraph.githubassets.com/1/TheChance101/MENA-mobile" alt="MENA App">
+                        <div class="project-overlay"><span>View on GitHub ↗</span></div>
+                    </a>
+                    <div class="project-body">
+                        <h4>MENA – Super Chat & Social App</h4>
+                        <p>
+                            A Kotlin Multiplatform super-app built with 60+ participants across 6 teams.
+                            Developed the Wallet Module including peer-to-peer transfers, transaction history
+                            with filters, PDF export, and offline-first caching.
+                        </p>
+                        <div class="tags-row">
+                            <em>KMP</em><em>Compose</em><em>Ktor</em><em>Room</em><em>Koin</em>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <a href="https://github.com/Baghdad-Squad/Novix" target="_blank" class="project-img-link">
+                        <img src="https://opengraph.githubassets.com/1/Baghdad-Squad/Novix" alt="Novix App">
+                        <div class="project-overlay"><span>View on GitHub ↗</span></div>
+                    </a>
+                    <div class="project-body">
+                        <h4>Novix – Movie Discovery App</h4>
+                        <p>
+                            An Android movie discovery app integrating the TMDB API with smart caching.
+                            Features an AI-based Islamic content filter, Dark and Light themes,
+                            Firebase Analytics and Crashlytics.
+                        </p>
+                        <div class="tags-row">
+                            <em>Kotlin</em><em>Compose</em><em>TMDB</em><em>Firebase</em><em>Hilt</em>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <a href="https://github.com/Havana-Squad/Qurio" target="_blank" class="project-img-link">
+                        <img src="https://opengraph.githubassets.com/1/Havana-Squad/Qurio" alt="Qurio App">
+                        <div class="project-overlay"><span>View on GitHub ↗</span></div>
+                    </a>
+                    <div class="project-body">
+                        <h4>Qurio – Trivia Quiz App</h4>
+                        <p>
+                            A trivia quiz app featuring categories, timed questions, a scoring system,
+                            daily streaks, avatars, and performance history. Built with MVP architecture
+                            and Kotlin Coroutines.
+                        </p>
+                        <div class="tags-row">
+                            <em>Kotlin</em><em>XML</em><em>MVP</em><em>Retrofit</em><em>Room</em>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
-        <h2>Contact</h2>
-        <p>
-            I am currently open to new opportunities and collaborations.
-            Feel free to reach out.
-        </p>
-        <ul>
-            <li>farah.kh.tabal7@gmail.com</li>
-            <li><a href="https://linkedin.com/in/farah-tabal" target="_blank">linkedin.com/in/farah-tabal</a></li>
-            <li><a href="https://github.com/Farah315" target="_blank">github.com/Farah315</a></li>
-            <li>+970 594 470 134</li>
-        </ul>
+        <div class="section-inner contact-inner">
+            <div class="contact-layout">
+                <div class="contact-left">
+                    <h2>Let's Connect</h2>
+                    <p>I am currently open to new opportunities and collaborations. Feel free to reach out.</p>
+                    <div class="contact-grid">
+                        <a href="mailto:farah.kh.tabal7@gmail.com" class="contact-card">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">farah.kh.tabal7@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/farah-tabal" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">farah-tabal</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Farah315" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">Farah315</span>
+                            </div>
+                        </a>
+                        <a href="tel:+970594470134" class="contact-card">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+970 594 470 134</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <div class="contact-img-wrap">
+                        <img src="images/contact.png" alt="Contact illustration">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>2025 Farah Tabal. All rights reserved.</p>
-        <p>Mobile Software Engineer · Android Developer · Palestine</p>
+        <p>© 2025 Farah Tabal · Mobile Software Engineer · Palestine</p>
     </footer>
 
+    <script>
+        // Mobile nav toggle
+        const toggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('mainNav');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            toggle.classList.toggle('active');
+        });
+        // Close nav on link click
+        nav.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                nav.classList.remove('open');
+                toggle.classList.remove('active');
+            });
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('section, .project, .stat, .skills-grid li').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                if (window.scrollY >= s.offsetTop - 120) current = s.id;
+            });
+            document.querySelectorAll('nav a').forEach(a => {
+                a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+            });
+        });
+    </script>
 </body>
 </html>
