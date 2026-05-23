@@ -170,6 +170,24 @@
                     </div>
                 </article>
 
+                <article class="project">
+                    <a href="https://github.com/Farah315/Penny-Wise" target="_blank" class="project-img-link">
+                        <img src="https://opengraph.githubassets.com/1/Farah315/Penny-Wise" alt="Penny Wise App">
+                        <div class="project-overlay"><span>View on GitHub ↗</span></div>
+                    </a>
+                    <div class="project-body">
+                        <h4>Penny Wise – Personal Finance Tracker</h4>
+                        <p>
+                            A cross-platform Flutter app for personal expense management with offline-first
+                            architecture, real-time Firebase sync, and visual analytics including
+                            category-wise pie charts and monthly summaries.
+                        </p>
+                        <div class="tags-row">
+                            <em>Flutter</em><em>Dart</em><em>Firebase</em><em>SQLite</em><em>BLoC</em>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
@@ -233,14 +251,12 @@
     </footer>
 
     <script>
-       
         const toggle = document.getElementById('menuToggle');
         const nav = document.getElementById('mainNav');
         toggle.addEventListener('click', () => {
             nav.classList.toggle('open');
             toggle.classList.toggle('active');
         });
-        
         
         nav.querySelectorAll('a').forEach(a => {
             a.addEventListener('click', () => {
@@ -249,7 +265,6 @@
             });
         });
 
-        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(e => {
                 if (e.isIntersecting) {
@@ -262,7 +277,6 @@
             observer.observe(el);
         });
 
-        
         const sections = document.querySelectorAll('section[id]');
         window.addEventListener('scroll', () => {
             let current = '';
